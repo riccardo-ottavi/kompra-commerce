@@ -1,5 +1,12 @@
 export default function Header(){
     return(
-        <p>Header</p>
+        <header>
+            <div className="logo">
+                Kompra Store
+            </div>
+            <div className="category select">
+                
+            </div>
+        </header>
     )
 }

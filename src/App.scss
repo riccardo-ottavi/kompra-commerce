@@ -12,6 +12,11 @@ $global-font: "Inter", sans-serif;
   box-sizing: border-box;
 }
 
+header{
+    height: 80px;
+    margin-bottom: $spacing-sm;
+    background-color: white;
+}
 
 body {
   background-color: $bg-color;

@@ -11,6 +11,38 @@ export async function fetchProductList(): Promise<Product[]> {
 
   const productList: Product[] = await productRes.json();
 
-  console.log(productList)
   return productList;
+}
+
+export async function fetchProductsByCategory(
+    category: string
+): Promise<Product[]> {
+
+    const res = await fetch(
+        `${API_URL}/products/category/${category}`
+    );
+
+    if (!res.ok) {
+        throw new Error("Couldn't fetch products by category");
+    }
+
+    const products = await res.json();
+
+    return products;
+}
+
+
+export async function fetchCategories(): Promise<string[]> {
+
+    const res = await fetch(
+        `${API_URL}/products/categories`
+    );
+
+    if (!res.ok) {
+        throw new Error("Couldn't fetch categories");
+    }
+
+    const categories = await res.json();
+
+    return categories;
 }
