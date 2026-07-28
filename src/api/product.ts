@@ -26,7 +26,7 @@ export async function fetchProductsByCategory(
         throw new Error("Couldn't fetch products by category");
     }
 
-    const products = await res.json();
+    const products: Product[] = await res.json();
 
     return products;
 }
@@ -42,7 +42,7 @@ export async function fetchCategories(): Promise<string[]> {
         throw new Error("Couldn't fetch categories");
     }
 
-    const categories = await res.json();
+    const categories: string[] = await res.json();
 
     return categories;
 }

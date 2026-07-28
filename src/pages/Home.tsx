@@ -1,30 +1,50 @@
 import { useEffect, useState } from "react";
-import { fetchProductList } from "../api/product";
+import { fetchProductList, fetchProductsByCategory } from "../api/product";
 import type { Product } from "../types/product";
 import ProductCard from "../components/ProductCard";
+import { useSearchParams } from "react-router-dom";
 
 export default function Home() {
+
     const [productList, setProductList] = useState<Product[]>([]);
 
-    useEffect(() => {
-        loadList();
-    }, []);
+    const [searchParams] = useSearchParams();
 
-    async function loadList() {
+    const category = searchParams.get("category");
+
+    useEffect(() => {
+        loadProducts();
+    }, [category]);
+
+    async function loadProducts() {
         try {
-            const data = await fetchProductList();
-            setProductList(data);
-        } catch (err) {
-            console.error("Couldn't load the products:", err);
+            
+            if (category) {
+                const data = await fetchProductsByCategory(category);
+                setProductList(data);
+            }
+            else {
+                const data = await fetchProductList();
+                setProductList(data);
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "Couldn't load products",
+                error
+            );
         }
     }
+
 
     return (
         <div className="products-container">
             {productList && (
                 <ul>
-                    {productList.map((p) =>(
-                        <ProductCard 
+                    {productList.map((p) => (
+                        <ProductCard
                             key={p.id}
                             product={p}
                         />
