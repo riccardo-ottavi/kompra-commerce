@@ -1,75 +1,74 @@
-# React + TypeScript + Vite
+# Kompra Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A base e-commerce project built with React and TypeScript using Vite, featuring routing, a shared layout, and core pages.
 
-Currently, two official plugins are available:
+## Current project status
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project currently includes:
+- an initial setup with Vite, React, and TypeScript
+- main routing with React Router
+- a shared layout structure
+- core pages such as Home, Product Detail, Login, Cart, Wishlist, and a 404 page
+- protected routes for Cart and Wishlist
+- initial styling with SCSS
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Vite 8
+- React Router DOM
+- SCSS
+- ESLint
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the project locally:
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Available scripts
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `npm run dev` → starts the development server
+- `npm run build` → creates a production build
+- `npm run preview` → starts a preview of the build
+- `npm run lint` → runs ESLint
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Main structure
 
-```
+- `src/pages` → application pages
+- `src/components` → reusable components
+- `src/layouts` → shared layouts
+- `src/router` → routing and protected routes
+- `src/App.tsx` → main route configuration
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project goal
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is being developed as a challenge to build an e-commerce web app for displaying products, categories, and product details. The application is intended to support user authentication and protected features such as the Shopping Cart and Wishlist.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The challenge focuses on evaluating code organization, API integration, and attention to detail. The main backend source is the Fake Store API.
 
-```
+### Challenge summary
+
+Create an e-commerce web app where users can:
+- browse products and categories
+- view product details
+- authenticate and access protected areas
+- interact with cart and wishlist features
+
+### Technical requirements
+
+- TypeScript is mandatory
+- React is used for the UI
+- Fake Store API is used as the data source
+- The app should follow modern UX principles and remain responsive and accessible
+
+## AI usage
+
+AI tools were used during development to help with scaffolding, debugging, and code refinement. Generated output was reviewed and validated manually to ensure it fit the project requirements and remained consistent with the current implementation.
