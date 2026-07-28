@@ -1,74 +1,184 @@
 # Kompra Commerce
 
-A base e-commerce project built with React and TypeScript using Vite, featuring routing, a shared layout, and core pages.
+A frontend e-commerce application built with React and TypeScript using Vite.
+
+This project is being developed as a technical challenge focused on clean code organization, TypeScript usage, API integration, responsive design, and modern frontend development practices.
+
+---
 
 ## Current project status
 
-The project currently includes:
-- an initial setup with Vite, React, and TypeScript
-- main routing with React Router
-- a shared layout structure
-- core pages such as Home, Product Detail, Login, Cart, Wishlist, and a 404 page
-- protected routes for Cart and Wishlist
-- initial styling with SCSS
+### Completed
+
+- Vite + React + TypeScript project setup
+- React Router configuration
+- Shared layout structure
+- Initial route organization
+- Protected route architecture setup
+- Initial SCSS configuration
+- TypeScript interfaces structure
+
+### In progress
+
+- Product catalogue integration with Fake Store API
+- Dynamic category navigation
+- Product listing page
+- Product detail page
+- Authentication flow
+- Protected features:
+  - Shopping Cart
+  - Wishlist
+- State management
+- Unit testing
+- Accessibility improvements
+- UI refinement and animations
+
+---
 
 ## Tech stack
+
+### Core
 
 - React 19
 - TypeScript
 - Vite 8
-- React Router DOM
+
+### Styling
+
 - SCSS
+
+### Routing
+
+- React Router DOM
+
+### Testing
+
+- Jest
+- React Testing Library
+
+### Code quality
+
 - ESLint
+
+---
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the project locally:
-   ```bash
-   npm run dev
-   ```
+Clone the repository:
+
+```bash
+git clone https://github.com/riccardo-ottavi/kompra.git
+```
+
+Move into the project directory:
+
+```bash
+cd kompra
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
 
 ## Available scripts
 
-- `npm run dev` → starts the development server
-- `npm run build` → creates a production build
-- `npm run preview` → starts a preview of the build
-- `npm run lint` → runs ESLint
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts the development server |
+| `npm run build` | Creates a production build |
+| `npm run preview` | Starts a preview of the production build |
+| `npm run lint` | Runs ESLint |
+| `npm test` | Runs the test suite |
 
-## Main structure
+---
 
-- `src/pages` → application pages
-- `src/components` → reusable components
-- `src/layouts` → shared layouts
-- `src/router` → routing and protected routes
-- `src/App.tsx` → main route configuration
+## Project structure
 
-## Project goal
+```text
+src/
+├── components/      # Reusable UI components
+├── layouts/         # Shared application layouts
+├── pages/           # Application views
+├── routes/          # Routing configuration and protected routes
+├── types/           # TypeScript interfaces and shared types
+├── assets/          # Static assets
+├── App.tsx          # Main application configuration
+└── main.tsx         # Application entry point
+```
 
-This project is being developed as a challenge to build an e-commerce web app for displaying products, categories, and product details. The application is intended to support user authentication and protected features such as the Shopping Cart and Wishlist.
+---
 
-The challenge focuses on evaluating code organization, API integration, and attention to detail. The main backend source is the Fake Store API.
+## Application goal
 
-### Challenge summary
+The goal of this project is to build a complete e-commerce experience where users can:
 
-Create an e-commerce web app where users can:
-- browse products and categories
-- view product details
-- authenticate and access protected areas
-- interact with cart and wishlist features
+- Browse available products
+- Navigate products by category
+- View detailed product information
+- Authenticate into the application
+- Access protected features such as:
+  - Shopping Cart
+  - Wishlist
 
-### Technical requirements
+The application focuses on demonstrating:
 
-- TypeScript is mandatory
-- React is used for the UI
-- Fake Store API is used as the data source
-- The app should follow modern UX principles and remain responsive and accessible
+- Component-based architecture
+- Strong TypeScript typing
+- API integration
+- Clean folder organization
+- Responsive layouts
+- Accessible user interfaces
+
+---
+
+## Data source
+
+The application uses the Fake Store API as the external data source for:
+
+- Products
+- Categories
+- Product information
+
+API documentation:
+
+https://fakestoreapi.com/docs
+
+---
+
+## Development workflow
+
+The project follows a feature-based Git workflow.
+
+Development is organized through dedicated branches:
+
+- `feature/products`
+- `feature/product-detail`
+- `feature/auth`
+- `feature/cart`
+- `feature/theme`
+
+Each feature is developed separately and merged through Pull Requests.
+
+---
 
 ## AI usage
 
-AI tools were used during development to help with scaffolding, debugging, and code refinement. Generated output was reviewed and validated manually to ensure it fit the project requirements and remained consistent with the current implementation.
+AI tools were used during development to assist with:
+
+- Project scaffolding
+- Debugging
+- Code refinement
+- Exploring implementation approaches
+- Documentation improvements
+
+All generated suggestions were manually reviewed, tested, and adapted to ensure consistency with the project requirements and coding standards.
