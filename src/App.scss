@@ -1,91 +1,156 @@
-$bg-color: #F5F5F5;
-$card-bg: white;
+$bg-color: #f5f5f5;
+$header-bg: #ffffff;
+$text-color: rgba(11, 4, 32, 0.438);
+$logo-bg: #90a9e050;
+$global-font: "Inter", sans-serif;
+$header-height: 80px;
+$horizontal-padding: 120px;
+$card-bg: rgb(252, 250, 246);
+$card-text-color: #3d4760;
 $card-text-bg: rgb(252, 250, 246);
 $spacing-sm: 40px;
 $spacing-md: 1rem;
-$global-font: "Inter", sans-serif;
-
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    height: 80px;
-    margin-bottom: $spacing-sm;
-    background-color: white;
+header {
+    width: 100%;
+    height: $header-height;
+
+    background-color: $header-bg;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 $horizontal-padding;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+
+    .logo-container {
+        background-color: $logo-bg;
+        padding: 4px 15px;
+        border-radius: 8px;
+
+        .logo {
+            font-size: 35px;
+        }
+    }
+
+    .category-select {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        select {
+            height: 100%;
+
+            
+
+            font-size: 17px;
+            font-weight: 550;
+
+            border: none;
+            outline: none;
+
+            cursor: pointer;
+
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            padding: 0 25px;
+
+            transition: color 0.2s ease;
+
+        }
+
+        &:hover {
+            border-bottom: 1px solid $text-color;
+        }
+    }
 }
 
 body {
-  background-color: $bg-color;
-  font-family: $global-font;
+    background-color: $bg-color;
+    font-family: $global-font;
+}
+
+main {
+    padding-top: calc($header-height + 40px);
 }
 
 
 .products-container {
-  width: 70%;
-  margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-sm;
-    list-style: none;
-  }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-sm;
+        list-style: none;
+    }
 }
 
 
 .product-card {
-  display: flex;
-  flex-direction: column;
-
-  width: calc((100% / 4) - 40px);
-  min-height: 300px;
-
-  background-color: $card-bg;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  img {
-    width: 100%;
-    height: 280px;
-    object-fit: contain;
-    padding: $spacing-md;
-  }
-
-  &-text {
-    background-color: $card-text-bg;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    gap: 20px;
-    padding: 5px;
 
-    span {
-      font-weight: 550;
+    width: calc((100% / 4) - 40px);
+    min-height: 300px;
+
+    background-color: $card-bg;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    img {
+        width: 100%;
+        height: 280px;
+        object-fit: contain;
+        padding: $spacing-md;
     }
-  }
 
-  .title-label {
-    color: #3d4760;
-    font-size: 14px;
-  }
+    &-text {
+        background-color: $card-text-bg;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 20px;
+        padding: 5px;
 
-  .price-label {
-    margin-top: auto;
-    padding: 20px;
-    color: #3d4760;
-  }
+        span {
+            font-weight: 550;
+        }
+    }
 
-  .category-label{
-    color: #3d4760;
-    font-size: 12px;
-  }
+    .title-label {
+        color: #3d4760;
+        font-size: 14px;
+    }
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-  }
+    .price-label {
+        margin-top: auto;
+        padding: 20px;
+        color: #3d4760;
+    }
+
+    .category-label{
+        color: #3d4760;
+        font-size: 12px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
 }

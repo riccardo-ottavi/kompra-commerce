@@ -10,7 +10,6 @@ export default function Header() {
 
     const selectedCategory = searchParams.get("category") ?? "all";
 
-
     useEffect(() => {
 
         async function loadCategories() {
@@ -32,25 +31,24 @@ export default function Header() {
         if (category === "all") {
             setSearchParams({});
         } else {
-            setSearchParams({category});
+            setSearchParams({ category });
         }
     }
 
     return (
         <header>
-            <div className="logo">
-                <span>Kompra Store</span>
+            <div className="logo-container">
+                <span className="logo">Kompra</span>
             </div>
-            <div className="category select">
+            <div className="category-select">
                 <select
                     value={selectedCategory}
                     onChange={handleCategoryChange}
                 >
 
                     <option value="all">
-                        All categories
+                        ALL CATEGORIES
                     </option>
-
 
                     {categories.map(category => (
 
@@ -58,11 +56,10 @@ export default function Header() {
                             key={category}
                             value={category}
                         >
-                            {category}
+                            {category.toUpperCase()}
                         </option>
 
                     ))}
-
 
                 </select>
             </div>
