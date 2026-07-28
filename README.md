@@ -8,18 +8,20 @@ This project is being developed as a technical challenge focused on clean code o
 
 ## Current project status
 
-### Completed
+## Features
 
-- Vite + React + TypeScript project setup
-- React Router configuration
-- Shared layout structure
-- Initial route organization
-- Protected route architecture setup
-- Initial SCSS configuration
-- TypeScript interfaces structure
+Currently implemented:
 
-### In progress
+- Product catalogue retrieval from external API
+- Category selection through header navigation
+- Client-side routing
+- Component-based layout
 
+Upcoming:
+
+- Product details
+- Authentication
+- Theme switching
 - Product catalogue integration with Fake Store API
 - Dynamic category navigation
 - Product listing page
@@ -159,13 +161,14 @@ https://fakestoreapi.com/docs
 
 The project follows a feature-based Git workflow.
 
-Development is organized through dedicated branches:
+Development is planned to be organized through dedicated branches:
 
-- `feature/products`
+- `feature/display-products`
+- `feature/category-filter`
 - `feature/product-detail`
+- `feature/theme`
 - `feature/auth`
 - `feature/cart`
-- `feature/theme`
 
 Each feature is developed separately and merged through Pull Requests.
 
