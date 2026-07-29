@@ -1,5 +1,3 @@
-import type { User } from "./user";
-
 export type LoginRequest = {
     username: string;
     password: string;
@@ -10,7 +8,6 @@ export type AuthResponse = {
 };
 
 export type AuthContextType = {
-    user: User | null;
     token: string | null;
 
     login: (
