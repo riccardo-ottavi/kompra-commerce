@@ -23,14 +23,14 @@ export default function ProductDetail() {
 
     return (
         <div className="details">
-            <img src={product?.image} alt="" />
+            <img src={product?.image} alt={product?.title} />
             <div className="details-text">
-                <span>{product?.category}</span>
-                <span>{product?.title}</span>
+                <span>{product?.category.toUpperCase()}</span>
+                <h2>{product?.title}</h2>
                 <p>{product?.description}</p>
-                <span>{product?.price.toFixed(2)}€</span>
-                <span>{product?.rating.rate}</span>
-                <span>{product?.rating.count}</span>            
+                <strong>{product?.price.toFixed(2)}€</strong>
+                <span>Rating: {product?.rating.rate}</span>
+                <span>Rated by {product?.rating.count} users</span>            
             </div>
         </div>
     )

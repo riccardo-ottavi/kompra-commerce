@@ -154,3 +154,30 @@ main {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
     }
 }
+
+.details{
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    font-size: 17px;
+    width: 60%;
+    min-height: 350px;
+    background-color: $card-bg;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    img{
+        height: 250px;
+        align-self: center;
+    }
+    
+    .details-text{
+        margin-left: 30px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+}
