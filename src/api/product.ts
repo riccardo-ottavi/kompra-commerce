@@ -31,6 +31,22 @@ export async function fetchProductsByCategory(
     return products;
 }
 
+export async function fetchProductById(
+    id: string
+): Promise<Product> {
+
+    const res = await fetch(
+        `${API_URL}/products/${id}`
+    );
+
+    if (!res.ok) {
+        throw new Error("Couldn't fetch product");
+    }
+
+    const product: Product = await res.json();
+
+    return product;
+}
 
 export async function fetchCategories(): Promise<string[]> {
 
