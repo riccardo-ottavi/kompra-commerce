@@ -6,8 +6,6 @@ This project is being developed as a technical challenge focused on clean code o
 
 ---
 
-## Current project status
-
 ## Features
 
 Currently implemented:
@@ -16,21 +14,18 @@ Currently implemented:
 - Category selection through header navigation
 - Client-side routing
 - Component-based layout
+- Product detail page
+- Authentication via Fake Store API
+- Persistent authentication using localStorage
+- Protected routes
 
 Upcoming:
 
-- Product details
-- Authentication
 - Theme switching
-- Product catalogue integration with Fake Store API
-- Dynamic category navigation
-- Product listing page
-- Product detail page
-- Authentication flow
 - Protected features:
   - Shopping Cart
   - Wishlist
-- State management
+- Global states management
 - Unit testing
 - Accessibility improvements
 - UI refinement and animations
@@ -108,14 +103,16 @@ npm run dev
 
 ```text
 src/
-├── components/      # Reusable UI components
-├── layouts/         # Shared application layouts
-├── pages/           # Application views
-├── routes/          # Routing configuration and protected routes
-├── types/           # TypeScript interfaces and shared types
-├── assets/          # Static assets
-├── App.tsx          # Main application configuration
-└── main.tsx         # Application entry point
+├── api/
+├── components/
+├── contexts/
+├── layouts/
+├── pages/
+├── router/
+├── types/
+├── assets/
+├── App.tsx
+└── main.tsx
 ```
 
 ---
