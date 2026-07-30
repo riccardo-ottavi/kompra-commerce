@@ -106,13 +106,12 @@ header {
     }
 }
 
-.auth-btn {
+.auth-btn{
     height: 40px;
     width: 60px;
     cursor: pointer;
-    border: none;
-
-    &:hover {
+    border: none;  
+    &:hover{
         background-color: #f8f8f8;
     }
 }
@@ -226,10 +225,11 @@ main {
 }
 
 .cart-btn {
+    display: flex;
+    align-items: center;
     height: 40px;
     width: 40px;
     cursor: pointer;
-    margin-top: auto;
 
     img {
         width: 40px;
