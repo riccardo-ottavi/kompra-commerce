@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react"
 import { useSearchParams } from "react-router-dom";
 import { fetchCategories } from "../api/product";
+import LoginForm from "./LoginForm";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function Header() {
+
+    const { isAuthenticated, logout } = useAuth()
 
     const [categories, setCategories] = useState<string[]>([]);
 
@@ -60,9 +64,20 @@ export default function Header() {
                         </option>
 
                     ))}
-
                 </select>
             </div>
+            {
+                isAuthenticated
+                    ?
+                    <button 
+                        onClick={logout}
+                        className="auth-btn"
+                    >
+                        Logout
+                    </button>
+                    :
+                    <LoginForm />
+            }
         </header>
     )
 }
