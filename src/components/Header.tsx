@@ -69,7 +69,10 @@ export default function Header() {
             {
                 isAuthenticated
                     ?
-                    <button onClick={logout}>
+                    <button 
+                        onClick={logout}
+                        className="auth-btn"
+                    >
                         Logout
                     </button>
                     :

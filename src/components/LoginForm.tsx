@@ -22,7 +22,7 @@ export default function LoginForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Username"
@@ -37,7 +37,7 @@ export default function LoginForm() {
                 onChange={e => setPassword(e.target.value)}
             />
 
-            <button type="submit">
+            <button className="auth-btn" type="submit">
                 Login
             </button>
 
