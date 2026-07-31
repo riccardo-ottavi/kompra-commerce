@@ -229,13 +229,20 @@ main {
 
 }
 
-.cart-btn {
+.item-menu{
+    display: flex;
+    gap: 5px;
+}
+
+.cart-btn,
+.wishlist-btn {
     display: flex;
     align-items: center;
     height: 40px;
     width: 40px;
     cursor: pointer;
-
+    border: none;
+    background: none;
     img {
         width: 40px;
         height: 40px;
