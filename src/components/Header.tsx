@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { fetchCategories } from "../api/product";
 import LoginForm from "./LoginForm";
 import { useAuth } from "../contexts/AuthContext";
@@ -82,14 +82,16 @@ export default function Header() {
                     :
                     <LoginForm />
             }
-            <div className="cart-btn">
-                <img src={cartIcon} alt="cart-icon"/>
-                {getCartCount() > 0 && (
-                <span>
-                 x{getCartCount()}
-                </span>
-            )}
+            <Link to={"/cart"}>
+                <div className="cart-btn">
+                    <img src={cartIcon} alt="cart-icon"/>
+                    {getCartCount() > 0 && (
+                    <span>
+                    x{getCartCount()}
+                    </span>
+                )}
             </div>
+            </Link>
 
         </header>
     )
