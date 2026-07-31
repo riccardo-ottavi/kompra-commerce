@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm";
 import { useAuth } from "../contexts/AuthContext";
 import { useCart } from "../contexts/CartContext";
 import cartIcon from "../assets/cart-icon.svg"
+import starFull from "../assets/star-full.svg"
 
 export default function Header() {
 
@@ -82,16 +83,24 @@ export default function Header() {
                     :
                     <LoginForm />
             }
-            <Link to={"/cart"}>
-                <div className="cart-btn">
-                    <img src={cartIcon} alt="cart-icon"/>
-                    {getCartCount() > 0 && (
-                    <span>
-                    x{getCartCount()}
-                    </span>
-                )}
+            <div className="menu">
+                <Link to={"/wishlist"}>
+                    <div className="wishlist-btn">
+                        <img src={starFull} alt="star-icon" />
+                    </div>
+                </Link>
+                <Link to={"/cart"}>
+                    <div className="cart-btn">
+                        <img src={cartIcon} alt="cart-icon" />
+                        {getCartCount() > 0 && (
+                            <span>
+                                x{getCartCount()}
+                            </span>
+                        )}
+                    </div>
+                </Link>
             </div>
-            </Link>
+
 
         </header>
     )
