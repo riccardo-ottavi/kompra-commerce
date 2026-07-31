@@ -16,10 +16,13 @@ export default function WishlistItemCard({
 
         <div className="wishlist-item-card">
 
-            <img
-                src={item.image}
-                alt={item.title}
-            />
+            <div className="wishlist-item-img">
+                <img
+                    src={item.image}
+                    alt={item.title}
+                />
+            </div>
+
 
             <div className="wishlist-item-info">
 
