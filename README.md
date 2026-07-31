@@ -17,15 +17,15 @@ Currently implemented:
 - Product detail page
 - Authentication via Fake Store API
 - Persistent authentication using localStorage
+- Global states management
 - Protected routes
+- Protected features:
+  - Shopping Cart
+  - Wishlist
 
 Upcoming:
 
 - Theme switching
-- Protected features:
-  - Shopping Cart
-  - Wishlist
-- Global states management
 - Unit testing
 - Accessibility improvements
 - UI refinement and animations
@@ -166,6 +166,9 @@ Development is planned to be organized through dedicated branches:
 - `feature/theme`
 - `feature/auth`
 - `feature/cart`
+- `feature/navigation`
+-  `feature/wishlist`
+-  `feature/ui-polish`
 
 Each feature is developed separately and merged through Pull Requests.
 
