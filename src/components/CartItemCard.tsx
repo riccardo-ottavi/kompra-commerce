@@ -26,7 +26,6 @@ export default function CartItemCard({item,}: CartItemCardProps) {
                 </span>
 
                 <div className="quantity-controls">
-
                     <button
                         className="cart-minus-btn"
                         onClick={() =>
