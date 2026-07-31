@@ -243,13 +243,15 @@ main {
     cursor: pointer;
     border: none;
     background: none;
+
     img {
         width: 40px;
         height: 40px;
     }
 }
 
-.cart-page{
+.cart-page,
+.wishlist-page {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -259,37 +261,59 @@ main {
     margin: 0 auto;
 }
 
-.cart-items{
+.wishlist-container{
+    display: flex;
+    gap: $spacing-sm;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        background-color: rgb(248, 246, 250);
+        font-weight: 200;
+        padding: 4px 15px;
+        border-radius: 8px;
+    }
+}
+
+.cart-items,
+.wishlist-items {
     margin-top: $spacing-sm;
 }
 
-.cart-item-card{
+.cart-item-card,
+.wishlist-item-card {
     display: flex;
     width: 100%;
     gap: 20px;
     margin-bottom: $spacing-md;
     padding: 10px;
-    img{
+
+    img {
         height: 150px;
         width: 150px;
         object-fit: contain;
     }
-    .cart-item-info{
+
+    .cart-item-info,
+    .wishlist-item-info {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
+    h3 {
+        color: $card-text-color;
+        font-size: 18px;
+    }
+
 }
 
-.quantity-controls{
+.quantity-controls {
     display: flex;
     gap: 10px;
 }
 
 .cart-plus-btn,
-.cart-minus-btn
-{
+.cart-minus-btn {
     width: 30px;
     border: none;
     cursor:pointer;
@@ -298,12 +322,25 @@ main {
     }
 }
 
-.cart-remove-btn{
+.cart-remove-btn {
     width: 80px;
     height: 40px;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
+
     &:hover {
         background-color: #eee;
     }
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.wishlist-remove-btn {
+    width: 100px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
 }

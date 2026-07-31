@@ -28,7 +28,8 @@ export function WishlistProvider({
             productId: product.id,
             title: product.title,
             price: product.price,
-            image: product.image
+            image: product.image,
+            description: product.description
         };
 
         setWishlistItems(prev => [

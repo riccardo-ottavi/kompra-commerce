@@ -5,6 +5,7 @@ export type WishlistItem = {
     title: string;
     price: number;
     image: string;
+    description: string;
 };
 
 export type WishlistContextType = {
