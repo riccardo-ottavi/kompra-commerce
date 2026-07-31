@@ -78,6 +78,11 @@ header {
         }
     }
 
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
 }
 
 .login-form {
@@ -222,4 +227,76 @@ main {
         flex-direction: column;
     }
 
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.cart-page{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md * 2;
+    background-color: $card-bg;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.cart-items{
+    margin-top: $spacing-sm;
+}
+
+.cart-item-card{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: $spacing-md;
+    padding: 10px;
+    img{
+        height: 150px;
+        width: 150px;
+        object-fit: contain;
+    }
+    .cart-item-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+.quantity-controls{
+    display: flex;
+    gap: 10px;
+}
+
+.cart-plus-btn,
+.cart-minus-btn
+{
+    width: 30px;
+    border: none;
+    cursor:pointer;
+    &:hover {
+        background-color: #eee;
+    }
+}
+
+.cart-remove-btn{
+    width: 80px;
+    height: 40px;
+    border:none;
+    cursor:pointer;
+    &:hover {
+        background-color: #eee;
+    }
 }

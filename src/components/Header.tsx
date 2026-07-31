@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react"
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { fetchCategories } from "../api/product";
 import LoginForm from "./LoginForm";
 import { useAuth } from "../contexts/AuthContext";
+import { useCart } from "../contexts/CartContext";
+import cartIcon from "../assets/cart-icon.svg"
 
 export default function Header() {
 
     const { isAuthenticated, logout } = useAuth()
+
+    const { getCartCount } = useCart();
 
     const [categories, setCategories] = useState<string[]>([]);
 
@@ -69,7 +73,7 @@ export default function Header() {
             {
                 isAuthenticated
                     ?
-                    <button 
+                    <button
                         onClick={logout}
                         className="auth-btn"
                     >
@@ -78,6 +82,17 @@ export default function Header() {
                     :
                     <LoginForm />
             }
+            <Link to={"/cart"}>
+                <div className="cart-btn">
+                    <img src={cartIcon} alt="cart-icon"/>
+                    {getCartCount() > 0 && (
+                    <span>
+                    x{getCartCount()}
+                    </span>
+                )}
+            </div>
+            </Link>
+
         </header>
     )
 }
