@@ -1,5 +1,5 @@
 export default function Whishlist(){
     return(
-        <p>Whishlist</p>
+        <p>Wishlist</p>
     )
 }

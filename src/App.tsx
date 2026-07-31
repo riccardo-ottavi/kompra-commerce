@@ -6,10 +6,12 @@ import ProductDetail from './pages/ProductDetail'
 import Login from './pages/Login'
 import ProtectedRoute from './router/ProtectedRoute'
 import Cart from './pages/Cart'
-import Whishlist from './pages/Whishlist'
+
 import NotFound from './pages/NotFound'
 import { AuthProvider } from './contexts/AuthContext'
 import { CartProvider } from './contexts/CartContext'
+import { WishlistProvider } from './contexts/WishlistContext'
+import Wishlist from './pages/Wishlist'
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
     <>
       <AuthProvider>
         <CartProvider>
+          <WishlistProvider>
           <BrowserRouter>
             <Routes>
               <Route element={<DefaultLayout />}>
@@ -25,16 +28,16 @@ function App() {
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/login" element={<Login />} />
 
-
                 <Route element={<ProtectedRoute />}>
                   <Route path="/cart" element={<Cart />} />
-                  <Route path="/wishlist" element={<Whishlist />} />
+                  <Route path="/wishlist" element={<Wishlist />} />
                 </Route>
 
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
           </BrowserRouter>
+          </WishlistProvider>
         </CartProvider>
       </AuthProvider>
     </>
