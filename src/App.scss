@@ -279,12 +279,17 @@ main {
         display: flex;
         flex-direction: column;
     }
+    
+    button{
+        width: 70px;
+        color: var(--card-text-color);
+    }
 
 }
 
 .item-menu {
     display: flex;
-    gap: 5px;
+    gap: 20px;
 }
 
 .cart-btn,
@@ -296,11 +301,30 @@ main {
     cursor: pointer;
     border: none;
     background: none;
-
     img {
         width: 40px;
         height: 40px;
         background: none;
+    }
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 20px;
+    
+    text-decoration: none;
+    color: var(--card-text-color);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateX(-5px);
     }
 }
 

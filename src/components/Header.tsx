@@ -50,7 +50,9 @@ export default function Header() {
     return (
         <header>
             <div className="logo-container">
+                <Link to={"/"}>
                 <span className="logo">Kompra</span>
+                </Link>
             </div>
             <div className="category-select">
                 <select

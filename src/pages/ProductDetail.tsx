@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 import type { Product } from "../types/product";
 import { fetchProductById } from "../api/product";
@@ -59,21 +59,19 @@ export default function ProductDetail() {
                             : addToWishlist(product)
                     }
                 >
-                    <img
-                        src={isFavorite ? starFull : starEmpty}
-                        alt={
-                            isFavorite
-                                ? "Remove from wishlist"
-                                : "Add to wishlist"
-                        }
-                    />
+                    {isFavorite
+                        ? "REMOVE FROM WISHLIST"
+                        : "ADD TO WISHLIST"}
                 </button>
-                <div
+                <button
                     className="cart-btn"
                     onClick={() => addToCart(product)}
                 >
-                    <img src={cartIcon} alt="cart-icon" className="cart-icon" />
-                </div>
+                    ADD TO CART
+                </button>
+                <Link to="/" className="back-home">
+                    ← Back 
+                </Link>
             </div>
         </div>
     )
