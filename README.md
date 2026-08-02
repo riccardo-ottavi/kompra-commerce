@@ -48,11 +48,6 @@ Upcoming:
 
 - React Router DOM
 
-### Testing
-
-- Jest
-- React Testing Library
-
 ### Code quality
 
 - ESLint
@@ -166,6 +161,7 @@ Development is planned to be organized through dedicated branches:
 - `feature/theme`
 - `feature/auth`
 - `feature/cart`
+- `feature/responsive-layout`
 - `feature/navigation`
 -  `feature/wishlist`
 -  `feature/ui-polish`
