@@ -4,6 +4,7 @@ import { fetchCategories } from "../api/product";
 import LoginForm from "./LoginForm";
 import { useAuth } from "../contexts/AuthContext";
 import { useCart } from "../contexts/CartContext";
+import { useTheme } from "../contexts/ThemeContext";
 import cartIcon from "../assets/cart-icon.svg"
 import starFull from "../assets/star-full.svg"
 
@@ -12,6 +13,8 @@ export default function Header() {
     const { isAuthenticated, logout } = useAuth()
 
     const { getCartCount } = useCart();
+
+    const { theme, toggleTheme } = useTheme();
 
     const [categories, setCategories] = useState<string[]>([]);
 
@@ -99,9 +102,13 @@ export default function Header() {
                         )}
                     </div>
                 </Link>
+                <button
+                    className="theme-btn"
+                    onClick={toggleTheme}
+                >
+                    {theme === "light" ? "🌙" : "☀️"}
+                </button>
             </div>
-
-
         </header>
     )
 }
