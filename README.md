@@ -22,11 +22,10 @@ Currently implemented:
 - Protected features:
   - Shopping Cart
   - Wishlist
+- Theme switching
 
 Upcoming:
 
-- Theme switching
-- Unit testing
 - Accessibility improvements
 - UI refinement and animations
 
@@ -164,7 +163,6 @@ Development is planned to be organized through dedicated branches:
 - `feature/responsive-layout`
 - `feature/navigation`
 -  `feature/wishlist`
--  `feature/ui-polish`
 
 Each feature is developed separately and merged through Pull Requests.
 
