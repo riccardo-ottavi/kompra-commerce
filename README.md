@@ -27,7 +27,6 @@ Currently implemented:
 Upcoming:
 
 - Accessibility improvements
-- UI refinement and animations
 
 ---
 
