@@ -183,6 +183,7 @@ main {
 .products-container {
     width: 70%;
     margin: 0 auto;
+    margin-bottom: $spacing-sm;
 
     ul {
         display: flex;
@@ -195,7 +196,7 @@ main {
 .product-card {
     display: flex;
     flex-direction: column;
-
+    cursor: pointer;
     width: calc((100% / 4) - 40px);
     min-height: 300px;
 
@@ -356,6 +357,7 @@ main {
 .cart-items,
 .wishlist-items {
     margin-top: $spacing-sm;
+    width: calc((100% / 2) - 20px);
 }
 
 .cart-item-card,
