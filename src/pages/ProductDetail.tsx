@@ -59,16 +59,22 @@ export default function ProductDetail() {
                             : addToWishlist(product)
                     }
                 >
-                    {isFavorite
-                        ? "REMOVE FROM WISHLIST"
-                        : "ADD TO WISHLIST"}
+                    <img
+                        src={isFavorite ? starFull : starEmpty}
+                        alt={
+                            isFavorite
+                                ? "Remove from wishlist"
+                                : "Add to wishlist"
+                        }
+                    />
                 </button>
                 <button
                     className="cart-btn"
                     onClick={() => addToCart(product)}
                 >
-                    ADD TO CART
+                    <img src={cartIcon} alt="cart-icon" className="cart-icon" />
                 </button>
+
                 <Link to="/" className="back-home">
                     ← Back 
                 </Link>
